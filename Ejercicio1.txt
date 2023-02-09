@@ -1,0 +1,104 @@
+/*
+
+Hacer un programa que pida 3 numeros y te diha cual es el mayor y cual es el menor 
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+/**
+ * @version 1.0
+ * @date 09/02/2023 
+ * @author Dante Gonzalez Almaraz
+ * @brief Encuentra el numero menor y el numero mayor de entre tres numeros dados por el usuario.
+ */
+
+int num1 = 0;
+int num2 = 0;
+int num3 = 0;
+
+int minim = 0;
+int maxim = 0;
+
+/**
+ * @brief Pide al usuario que introduzca los numeros a evaluas
+ * @param numX guarda el numero introducido
+ * @return void
+ * @code 
+    cout<<"Enter first number: ";
+    cin>>num1;
+    cout<<"Enter second number: ";
+    cin>>num2;
+    cout<<"Enter third number: ";
+    cin>>num3;
+    @endcode
+ */
+
+void EnterNumbers()
+{
+    cout<<"Enter first number: ";
+    cin>>num1;
+    cout<<"Enter second number: ";
+    cin>>num2;
+    cout<<"Enter third number: ";
+    cin>>num3;
+}
+
+/**
+ * @brief Compara los tres numeros para determinimar mayor y menor
+ * @param minim Guarda el numero minimimo
+ * @param maxim Guarda el numero maximimo
+ * @return void
+ * @code 
+    if (num1<=num2 && num1<=num3){
+        minim = num1;
+    } else if (num2<=num1 && num2<=num3){
+        minim = num2;
+    } else { minim = num3; }
+
+    if (num1>=num2 && num1>=num3){
+        maxim = num1;
+    } else if (num2>=num1 && num2>=num3){
+        maxim = num2;
+    } else { maxim = num3; }
+    @endcode
+ */
+
+void Compare()
+{
+    if (num1<=num2 && num1<=num3){
+        minim = num1;
+    } else if (num2<=num1 && num2<=num3){
+        minim = num2;
+    } else { minim = num3; }
+
+    if (num1>=num2 && num1>=num3){
+        maxim = num1;
+    } else if (num2>=num1 && num2>=num3){
+        maxim = num2;
+    } else { maxim = num3; }
+}
+
+/**
+ * @brief Muestra el numero mayor y menor
+ * @return void
+ * @code 
+    cout<<"Smallest number is: "<<minim<<endl<<"Biggest number is: "<<maxim;
+    @endcode
+ */
+
+void MinMax()
+{
+    cout<<"Smallest number is: "<<minim<<endl<<"Biggest number is: "<<maxim;
+}
+
+int main()
+{
+    EnterNumbers();
+    Compare();
+    MinMax();
+
+    return 0;
+}
