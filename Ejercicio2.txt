@@ -1,0 +1,69 @@
+/*
+
+Hacer un programa que calcule la edad del usuario, a partir de fecha de nacimiento
+
+> pedir al usuario su fecha de nacimiento (3 variables)
+> pedir al usuario fecha actual
+>
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int yearNow = 0;
+int monthNow = 0;
+int dayNow = 0;
+int yearBirth = 0;
+int monthBirth = 0;
+int dayBirth = 0;
+int age = 0;
+
+void BirthDate()
+{
+    cout << "Enter date of birth." << endl << "Day: ";
+    cin >> dayBirth;
+    cout << "Month: ";
+    cin >> monthBirth;
+    cout << "Year: ";
+    cin >> yearBirth;
+}
+
+
+void CurrentDate()
+{
+    cout << "Enter current date." << endl << "Day: ";
+    cin >> dayNow;
+    cout << "Month: ";
+    cin >> monthNow;
+    cout << "Year: ";
+    cin >> yearNow;
+}
+
+void CalculateAge()
+{
+    age = yearNow - yearBirth;
+
+    if (monthNow == monthBirth) {
+        if (dayNow < dayBirth) {
+            age--;
+        }
+    }
+    else if (monthNow < monthBirth) {
+        age--;
+    }
+
+
+    cout << "You are " << age << " years old.";
+}
+
+
+int main()
+{
+    BirthDate();
+    CurrentDate();
+    CalculateAge();
+
+    return 0;
+}
