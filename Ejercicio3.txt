@@ -1,0 +1,34 @@
+/*
+
+Hacer un programa que muestre la tabla de multiplicar del numero ingresado por el usuario
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int multiplier = 0;
+int multiply = 0;
+
+void EnterNumber()
+{
+    cout << "Enter number: ";
+    cin >> multiplier;
+}
+
+void MultiplicationTable()
+{
+    for(int i = 1; i < 11; i++) {
+        multiply = multiplier * i;
+        cout << multiplier<<" * "<<i<<" = "<<multiply << endl;;
+    }
+}
+
+int main()
+{
+    EnterNumber();
+    MultiplicationTable();
+
+    return 0;
+}
